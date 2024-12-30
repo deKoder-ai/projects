@@ -2,7 +2,7 @@
 const currentPage = location.pathname.split("/").pop();
 function createPath(page) {
     if (currentPage === 'index.html') {
-        path = `./html/${page}`;
+        path = `/html/${page}`;
     } else {
         path = `../html/${page}`;
     }
