@@ -1,0 +1,70 @@
+<!-- rock, paper, scissors-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/rps.css">
+    <script src="../js/headerDropDown.js" defer></script>
+    <script src="../js/rps.js" defer></script>
+    <title>FR33FL0W | Rock, Paper, Scissors</title>
+</head>
+
+<body>
+  <header class="z-index-2">
+    <div id="logo-flex-container">
+        <a href="../index.html" id="header-logo">FR33FL0W</a>
+    </div>
+    <div class="header-links" id="header-links">
+      <!-- headerDropDown.js -->
+    </div>
+
+    <img src="../img/burger-2.svg" alt="Menu Icon" id="burger-menu">
+    <button id="burger-menu-btn"></button>
+    
+    <div id="header-dropdown-content">
+      <!-- headerDropDown.js -->
+    </div>
+
+  </header>
+
+  <div id="game_container">
+    <div id="header">Rock, Paper, Scissors? Let's Play!</div>
+
+    <div id="container_1">
+      <div class="human_controls">
+        <p class="title">You: <span id="human_score">0</span></p>
+        <div id="human_btns">
+          <button class="human_game_btn" id="h_rock_btn">Rock</button>
+          <button class="human_game_btn" id="h_paper_btn">Paper</button>
+          <button class="human_game_btn" id="h_scissors_btn">Scissors</button>
+        </div>
+      </div>
+
+      <div id="game_info">
+        <p class="title">Round: <strong><span id="round_num">0</span></strong></p>
+        <div id="game_info_border">
+          <div class="game_info_2">
+            <p id="compare">Are you ready?</p>
+          </div>
+          <div class="game_info_2">
+            <p><strong><span id="winner">LFG!</span></strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="computer_controls">
+        <p class="title">Computer: <span id="computer_score">0</span></p>
+        <div id="computer_btns">
+          <button class="computer_game_btn" id="c_rock_btn">Rock</button>
+          <button class="computer_game_btn" id="c_paper_btn">Paper</button>
+          <button class="computer_game_btn" id="c_scissors_btn">Scissors</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

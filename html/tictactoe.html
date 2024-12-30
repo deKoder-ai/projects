@@ -1,0 +1,85 @@
+<!-- index.html template -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tictactoe.css">
+  <!-- research more about location in html for external scripts + async/defer? -->
+  <!-- defer loads script but prevents from running until html is parsed -->
+  <script src="../js/headerDropDown.js" defer></script>
+  <script src="../js/tictactoe.js" defer></script>
+  <title>FR33FL0W | Tic Tac Toe</title>
+</head>
+
+<body>
+  <header class="z-index-2">
+    <div id="logo-flex-container">
+        <a href="../index.html" id="header-logo">FR33FL0W</a>
+    </div>
+    <div class="header-links" id="header-links">
+      <!-- headerDropDown.js -->
+    </div>
+
+    <img src="../img/burger-2.svg" alt="Menu Icon" id="burger-menu">
+    <button id="burger-menu-btn"></button>
+    
+    <div id="header-dropdown-content">
+      <!-- headerDropDown.js -->
+    </div>
+
+  </header>
+  
+  <!-- links -->
+  <!-- target blank opens in new tab - rel prevents new website from knowing where the referral came from -->
+  <!-- <a href="https://xyz.com" target="_blank" rel="noopener noreferrer">Write text here</a> -->
+
+
+  <div class="view">
+    <div class="main">
+      <h1>Tic Tac Toe</h1>
+
+      <h2 class="flex-center"><span id="status"></span></h2>
+      <div id="gameboard-wrapper" class="flex-center">
+        <div id="o-score" class="score">0 :<span id="o-SCORE"></span></div>
+        <div id="gameboard-grid">
+          <div id="board-01" class="game-square"></div>
+          <div id="board-02" class="game-square"></div>
+          <div id="board-03" class="game-square"></div>
+          <div id="board-04" class="game-square"></div>
+          <div id="board-05" class="game-square"></div>
+          <div id="board-06" class="game-square"></div>
+          <div id="board-07" class="game-square"></div>
+          <div id="board-08" class="game-square"></div>
+          <div id="board-09" class="game-square"></div>
+        </div>
+        <div id="x-score" class="score">X :<span id="x-SCORE"></span></div>
+      </div>
+      <div id="buttons-container">
+        <div id="buttons" class="flex-center">
+          <button id="reset-game-btn">New Game</button>
+          <button id="reset-score-btn">Reset Score</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="z-index-2">
+    <p>©deKoder 2024</p>
+  </footer>
+  
+</body>
+
+</html>
+
+<!-- 
+Add scoring system and finish styling css
+
+- finish styling
+- add function to track and display scores
+- add button to reset scores
+- fix bug that means the same player always starts
+
+-->

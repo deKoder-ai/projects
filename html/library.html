@@ -1,0 +1,190 @@
+<!-- TOP Projext 008-library -->
+<!-- https://www.theodinproject.com/lessons/node-path-javascript-library -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/library.css">
+  <!-- research more about location in html for external scripts + async/defer? -->
+  <!-- defer loads script but prevents from running until html is parsed -->
+  <script src="../js/headerDropDown.js" defer></script>
+  <script src="../js/library.js" defer></script>
+  <title>FR33FL0W | Library</title>
+</head>
+
+<body>
+  <header class="z-index-2">
+    <div id="logo-flex-container">
+        <a href="../index.html" id="header-logo">FR33FL0W</a>
+    </div>
+    <div class="header-links" id="header-links">
+      <!-- headerDropDown.js -->
+    </div>
+
+    <img src="../img/burger-2.svg" alt="Menu Icon" id="burger-menu">
+    <button id="burger-menu-btn"></button>
+    
+    <div id="header-dropdown-content">
+      <!-- headerDropDown.js -->
+    </div>
+
+  </header>
+  
+
+  <!-- links -->
+  <!-- target blank opens in new tab - rel prevents new website from knowing where the referral came from -->
+  <!-- <a href="https://xyz.com" target="_blank" rel="noopener noreferrer">Write text here</a> -->
+
+
+  <div class="view image">
+    <div class="main">
+
+      <div class="flex-center">
+        <button type="button" id="new-book-btn">Add a new book</button>
+      </div>
+
+      <!-- <dialog id="new-book-dialog"> -->
+        <div id="new-book-form">
+          <form action="https://httpbin.org/post" method="post" id="new-book-data">
+            <button type="reset" id="close-form">X</button>
+            <div id="library-form">
+              <div class="input-div">
+                <label for="title">Title</label>
+                <input type="text" id="title"
+                  name="title"
+                  placeholder="Title..."
+                  required>
+              </div>
+              <div class="input-div">
+                <label for="author">Author</label>
+                <input type="text" id="author"
+                  name="author"
+                  placeholder="Author..."
+                  required>
+              </div>
+              <div class="input-div">
+                <label for="pages">Pages</label>
+                <input type="number" id="pages"
+                  name="pages"
+                  placeholder="# of pages..."
+                  required/>
+              </div>
+              <div class="input-div">
+                <label for="read">Read?</label>
+                <select name="read" id="read">
+                  <option value="true">Yes</option>
+                  <option value="false">No</option>
+                </select>
+              </div>
+              <div class="input-div">
+                <button type="submit" id="submit-book-btn">Submit</button>
+              </div>
+            </div>
+        
+          </form>
+        </div>
+      <!-- </dialog> -->
+
+      
+      <div id="book-list-container">
+        <h2 class="flex-center">Library</h2>
+        <ul id="book-list">
+
+        </ul>
+      </div>
+
+
+      <div class="flex-center">
+        <table>
+          <thead>
+            <tr>
+              <th class="column-1">Title</th>
+              <th class="column-2">Author</th>
+              <th class="column-3">Pages</th>
+              <th class="column-4">Read</th>
+              <th class="column-5"></th>
+            </tr>
+          </thead>
+          <tbody id="book-table">
+            <!-- js fills rows -->
+          </tbody>
+        </table>
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <footer class="z-index-2">
+    <p>©FR33FA11 2024</p>
+  </footer>
+  
+</body>
+
+</html>
+
+<!-- 
+Commit 1 \\
+Create html, css and js to display a form to add a new book
+
+- Add button to open new book form
+- Create HTML for new book form
+- Style new book form
+- Write css and js to toggle the visibility of the form
+
+Commit 2 \\
+Create HTML list of books and write js to add new books to the array and DOM
+
+ - Add more styling to new book form
+ - Add three initial books to library array
+ - Write js to get form inputs, convert to Book object and append to array
+ - Format array items to string
+ - Append books to ul
+ - Append newly submitted books to html list and display
+ - Use js to reset form after submission
+
+Commit 3 \\
+Add a delete button to remove individual list items
+
+ - Add a delete button to remove items from the library
+ - Style list items and related button
+ - Add a delete button to remove items from the library
+
+Commit 4 \\
+Replace book list with table and refactor js
+
+ - Convert book list to table
+ - Create addRow function to avoid code repetition
+
+Commit 5 \\
+Add a checkbox to display and alter read status
+
+ - Add read checkbox to table
+ - Toggle checkbox based on stored read status
+ - Change read true/false string to boolean value
+ - Change object read status on change of checkbox
+
+
+ Commit 6 \\
+Streamline code
+
+ - Streamlined column creation through use of for loops
+ - Added logic to avoid submitting books without all req data
+ - Attempted to use dialog but encountered weird duplication bug
+
+
+ To do:
+ - Read more about dialog element for form display:
+   https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog 
+ - refactor js to avoid repetition
+ - consider adding checkbox and delete button to book object
+-->

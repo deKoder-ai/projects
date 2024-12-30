@@ -1,0 +1,152 @@
+/* style.css template */
+
+/* global - specificity = 0 */
+
+body {
+    font-size: 22px;
+    font-family: Verdana, sans-serif;
+    color: rgb(204, 204, 204);
+    background-color: #222222;
+}
+
+/* ========== BOX MODEL ========== //
+//
+// Margin      | e.g. margin: 10px 10px 10px 20px (top | right | bottom | left)  
+// Border      | e.g. border: 2px dotted green
+// Padding     | e.g. padding: 10px (shorthand)
+// Content     | 
+// box-shadow: 1px 1px 4px rgba(0, 0, 0, .5);
+*/
+
+
+/* flex center */
+#container,
+.btns_row,
+#calc_border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#display_text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#container {
+    width: 100%;
+    height: 570px;
+}
+
+#calc_border {
+    height: 500px;
+    width: 400px;
+    outline: 1px solid rgba(154, 174, 211, 0.699);
+    border-radius: 12px;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.842);
+}
+
+#calc_container {
+    height: 500px;
+    width: 400px;
+    border-radius: 12px;
+    border: 14px solid rgb(13, 14, 48);
+}
+
+#display {
+    width: 100%;
+    height: 90px;
+    background-color: #bdbdbd;
+    background-image: linear-gradient(-90deg, #999999, #c5c3c3);
+    border: 6px solid rgb(0, 0, 0);
+}
+
+#btns_container {
+    width: 100%;
+    height: 385px;
+    background-color: rgb(60, 47, 77);
+}
+
+.btn {
+    width: 25%;
+    height: 73px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 2px;
+}
+
+#btn_0 {
+    width: 51%;
+}
+
+.numbers {
+    background-color: #36b9b3;
+    background-image: linear-gradient(-90deg, #36b9b3, #1e8883);
+}
+
+.tool {
+    background-color: #5069ad;
+    background-image: linear-gradient(-90deg, #5069ad, #5069ad);
+}
+
+.operator {
+    background-color: #77a9d1;
+    background-image: linear-gradient(90deg, #77a9d1, #4478a3);
+}
+
+.btn {
+    font-size: 30px;
+    font-family: Verdana, sans-serif;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+.btn:hover {
+    cursor: pointer;
+}
+
+#display {
+    font-size: 40px;
+    font-family: 'Courier New', monospace;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.719);
+    padding: 5px 25px 0 0;
+}
+
+<!-- HTML !-->
+<button class="button-42" role="button">Button 42</button>
+
+/* CSS */
+/* .button-42 {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow .2s;
+}
+
+.button-42:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+} */

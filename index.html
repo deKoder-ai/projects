@@ -1,0 +1,78 @@
+<!-- index.html template -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- research more about location in html for external scripts + async/defer? -->
+  <!-- defer loads script but prevents from running until html is parsed -->
+  <script src="./js/headerDropDown.js" defer></script>
+  <title>FR33FL0W | Home</title>
+</head>
+
+<body>
+  <header class="z-index-2">
+    <div id="logo-flex-container">
+        <a href="./index.html" id="header-logo">FR33FL0W</a>
+    </div>
+    <div class="header-links" id="header-links">
+      <!-- <a href="./html/admin-dashboard.html" id="link-1">Dashboard</a>
+      <a href="" id="link-2">About</a>
+      <a href="./html/sign-up.html" id="link-3">Sign Up</a>
+      <a href="" id="link-4">Login</a> -->
+    </div>
+
+    <img src="./img/burger-2.svg" alt="Menu Icon" id="burger-menu">
+    <button id="burger-menu-btn"></button>
+    
+    <div id="header-dropdown-content">
+      <!-- headerDropDown.js -->
+    </div>
+
+  </header>
+  
+
+  <!-- links -->
+  <!-- target blank opens in new tab - rel prevents new website from knowing where the referral came from -->
+  <!-- <a href="https://xyz.com" target="_blank" rel="noopener noreferrer">Write text here</a> -->
+
+
+  <div class="view image">
+    <div class="main">
+      <h1>FR33FL0W</h1>
+      <article class="main-text">
+        <p>Welcome to <a href="./index.html">FR33FL0W.com</a>! Here you will find a
+          fine selection of my endeavours to produce some amazing portfolio content
+          that will hopefully one day help me to get hired in this industry that I
+          love so much to play around in. So much so that I sometimes stay up all
+          night, forgetting to sleep as I try to finish a project.</p>
+        <p>Let's generate some random words to go in here like banana and chickens
+          and butter and all the good things like that.
+        </p>
+        <p>The platypus (Ornithorhynchus anatinus),[4] sometimes referred to as
+          the duck-billed platypus,[5] is a semiaquatic, egg-laying mammal endemic
+           to eastern Australia, including Tasmania. The platypus is the sole
+           living representative or monotypic taxon of its family Ornithorhynchidae
+            and genus Ornithorhynchus, though a number of related species appear
+            in the fossil record.
+        </p>
+        <p>Together with the four species of echidna, it is one of the five extant
+          species of monotremes, mammals that lay eggs instead of giving birth to
+          live young.[6] Like other monotremes, the platypus has a sense of
+          electrolocation, which it uses to detect prey in cloudy water.[7] It is
+          one of the few species of venomous mammals, as the male platypus has a
+          spur on the hind foot that delivers an extremely painful venom.
+        </p>
+      </article>
+        </div>
+    </div>
+
+  <footer class="z-index-2">
+    <p>©deKoder 2024</p>
+  </footer>
+  
+</body>
+
+</html>

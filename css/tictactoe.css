@@ -1,0 +1,116 @@
+@font-face {
+    font-family: adrip;
+    src: url(../fonts/adrip1.woff2);
+    font-weight: bold;
+    font-display: block;
+}
+:root {
+    --board-lines-col: rgba(128, 128, 128, 0.548);
+    --board-lines-style: solid;
+    --red: rgb(158, 40, 40);
+    --sq-hover-col: rgba(0, 0, 255, 0.048);
+    --btn-col: rgba(0, 0, 255, 0.048);
+}
+/* * {
+    border: 1px dashed blue;
+} */
+
+.view {
+    width: 100vw;
+    height: calc(100vh - var(--header-height));
+}
+.flex-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5.5rem;
+}
+h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+#gameboard-wrapper {
+    width: 100%;
+}
+.score {
+    font-family: adrip;
+    font-size: 6rem;
+    width: 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.score span {
+    padding-left: 15px;
+    letter-spacing: 0.5rem;
+}
+#o-score {
+    margin-left: 70px;
+}
+#x-score {
+    margin-right: 70px;
+    color: var(--red);
+}
+
+#gameboard-grid {
+    width: 310px;
+    height: 310px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    margin: 20px;
+}
+
+.game-square:hover {
+    background-color: var(--sq-hover-col);
+}
+.game-square {
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: adrip;
+    font-size: 5.8rem;
+    color: var(--red);
+    box-shadow: 0px -2px 15px rgba(68, 0, 255, 0.048);
+}
+#board-04, #board-05, #board-06, #board-07, #board-09 {
+    border-top: 2px var(--board-lines-style) var(--board-lines-col);
+}
+#board-02, #board-05, #board-08, #board-01, #board-07 {
+    border-right: 2px var(--board-lines-style) var(--board-lines-col);
+}
+#board-04, #board-05, #board-06, #board-01, #board-03 {
+    border-bottom: 2px var(--board-lines-style) var(--board-lines-col);
+}
+#board-02, #board-05, #board-08, #board-03, #board-09  {
+    border-left: 2px var(--board-lines-style) var(--board-lines-col);
+}
+
+#buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#buttons {
+    width: 350px;
+    height: 30px;
+}
+#reset-game-btn, #reset-score-btn {
+    font-size: 1.6rem;
+    width: 150px;
+    border-radius: 10px;
+    background-color: var(--btn-col);
+    color: rgb(202, 202, 202);
+    border: 1px solid rgb(0, 0, 0);
+}
+#reset-game-btn:hover, #reset-score-btn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 255, 0.226);
+    /* color: rgb(238, 0, 0); */
+    border: 2px solid rgb(0, 0, 0);
+}

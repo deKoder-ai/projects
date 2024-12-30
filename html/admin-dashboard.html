@@ -1,0 +1,339 @@
+<!-- admin dashboard -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/admin-dashboard.css">
+  <!-- research more about location in html for external scripts + async/defer? -->
+  <!-- defer loads script but prevents from running until html is parsed -->
+  <script src="../js/headerDropDown.js" defer></script>
+  <script src="../js/hover-highlight.js" defer></script>
+  <title>FR33FA11 | Admin Dashboard</title>
+</head>
+
+<body>
+  <header class="z-index-2">
+    <div id="logo-flex-container">
+        <a href="../index.html" id="header-logo">FR33FA11</a>
+    </div>
+    <div class="header-links" id="header-links">
+      <!-- headerDropDown.js -->
+    </div>
+
+    <img src="../img/burger-2.svg" alt="Menu Icon" id="burger-menu">
+    <button id="burger-menu-btn"></button>
+    
+    <div id="header-dropdown-content">
+      <!-- headerDropDown.js -->
+    </div>
+  </header>
+  
+
+  <!-- links -->
+  <!-- target blank opens in new tab - rel prevents new website from knowing where the referral came from -->
+  <!-- <a href="https://xyz.com" target="_blank" rel="noopener noreferrer">Write text here</a> -->
+
+
+  <div class="view">
+    <div id="grid-container-1">
+      <div id="left-sidebar">
+        <div class="sidebar-element" id="dashboard">
+          <img src="../img/dashboard.svg" alt="Dashboard icon" class="sidebar-svg" id="dashboard-svg">
+          <h2>Dashboard</h2>
+        </div>
+        <div class="sidebar-element">
+          <img src="../img/home.svg" alt="Home icon" class="sidebar-svg" id="home-icon">
+          <a href="../index.html" id="sb-home">Home</a>
+        </div>
+        <div class="sidebar-element">
+          <img src="../img/profile.svg" alt="Profile icon" class="sidebar-svg" id="profile-icon">
+          <a href="#" id="sb-profile">Profile</a>
+          <p></p>
+        </div>
+        <div class="sidebar-element">
+          <img src="../img/message.svg" alt="Messages icon" class="sidebar-svg" id="messages-icon">
+          <a href="#" id="sb-messages">Messages</a>
+        </div>
+        <div class="sidebar-element">
+          <img src="../img/history.svg" alt="History icon" class="sidebar-svg" id="history-icon">
+          <a href="#" id="sb-history">History</a>
+        </div>
+        <div class="sidebar-element">
+          <img src="../img/tasks.svg" alt="Tasks icon" class="sidebar-svg" id="tasks-icon">
+          <a href="#" id="sb-tasks">Tasks</a>
+        </div>
+        <div class="sidebar-element">
+          <img src="../img/community.svg" alt="Communities icon" class="sidebar-svg" id="community-icon">
+          <a href="#" id="sb-community">Communities</a>
+        </div>
+        <div class="sidebar-gap"></div>
+        <div class="sidebar-element">
+          <img src="../img/settings.svg" alt="Settings icon" class="sidebar-svg" id="settings-icon">
+          <a href="#" id="sb-settings">Settings</a>
+        </div>
+        <div class="sidebar-element">
+          <img src="../img/support.svg" alt="Support icon" class="sidebar-svg" id="support-icon">
+          <a href="#" id="sb-support">Support</a>
+        </div>
+        <div class="sidebar-element">
+          <img src="../img/privacy.svg" alt="Privacy icon" class="sidebar-svg" id="privacy-icon">
+          <a href="#" id="sb-privacy">Privacy</a>
+        </div>
+      </div>
+
+      <div id="top-container">
+        <div id="top-wrapper">
+          <div class="top-child">
+            <div id="search-container">
+              <img src="../img/search.svg" alt="Search icon" class="top-container-svg">
+              <input type="text" name="search-input" id="search-input">
+            </div>
+            <div id="alerts-container">
+              <a href="#"><img src="../img/notification.svg" alt="Notification icon" 
+                class="top-container-svg"></a>
+              <a href="../html/cat.html"><img src="../img/cat-profile.png" alt="Profile picture" 
+                type="png" id="cat-profile-top"></a>
+              <a href="#"><p>Jimmy Threadbare</p></a>
+            </div>
+          </div>
+          <div class="top-child">
+            <div id="top-welcome">
+              <a href="../html/cat.html"><img src="../img/cat-profile.png" alt="Profile picture" type="png" id="cat-profile-top-big"></a>
+              <div id="welcome-message">
+                <p>Hi there,</p>
+                <p>Jimmy Threadbare (@fr33fa11)</p>
+              </div>
+            </div>
+            <div id="top-buttons">
+              <button>New</button>
+              <button>Upload</button>
+              <button>Share</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="main-container">
+        <div id="main-title-1" class="main-title">
+          <h3><a href="#">Your Projects</a></h3>
+        </div>
+        <div id="main-title-2" class="main-title">
+          <h3><a href="#">Announcements</a></h3>
+        </div>
+        <div id="project-1" class="project">
+          <div class="project-side"></div>
+          <div class="project-content">
+            <div class="project-text">
+              <h3><a href="#">Super Cool Project</a></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit
+                 nihil labore pariatur, sint placeat laboriosam commodi</p>
+            </div>
+            <div class="project-icons">
+              <img src="../img/favourite.svg" alt="Favourite icon" class="project-icon">
+              <img src="../img/view.svg" alt="View icon" class="project-icon">
+              <img src="../img/share.svg" alt="Share icon" class="project-icon" id="share-icon">
+            </div>
+          </div>
+        </div>
+        <div id="project-2" class="project">
+          <div class="project-side"></div>
+          <div class="project-content">
+            <div class="project-text">
+              <h3><a href="#">Less Cool Project</a></h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque 
+                excepturi exercitationem molestias earum molestiae labore eum 
+                cupiditate?</p>
+            </div>
+            <div class="project-icons">
+              <img src="../img/favourite.svg" alt="Favourite icon" class="project-icon">
+              <img src="../img/view.svg" alt="View icon" class="project-icon">
+              <img src="../img/share.svg" alt="Share icon" class="project-icon" id="share-icon">
+            </div>
+          </div>
+        </div>
+        <div id="project-3" class="project">
+          <div class="project-side"></div>
+          <div class="project-content">
+            <div class="project-text">
+              <h3><a href="#">Impossible App</a></h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptate accusantium modi cum nostrum fugiat, ad laudantium 
+                unde!</p>
+            </div>
+            <div class="project-icons">
+              <img src="../img/favourite.svg" alt="Favourite icon" class="project-icon">
+              <img src="../img/view.svg" alt="View icon" class="project-icon">
+              <img src="../img/share.svg" alt="Share icon" class="project-icon" id="share-icon">
+            </div>
+          </div>
+        </div>
+        <div id="project-4" class="project">
+          <div class="project-side"></div>
+          <div class="project-content">
+            <div class="project-text">
+              <h3><a href="#">Easy App</a></h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Tenetur consequatur necessitatibus amet itaque magni quaerat, 
+                unde consectetur.</p>
+            </div>
+            <div class="project-icons">
+              <img src="../img/favourite.svg" alt="Favourite icon" class="project-icon">
+              <img src="../img/view.svg" alt="View icon" class="project-icon">
+              <img src="../img/share.svg" alt="Share icon" class="project-icon" id="share-icon">
+            </div>
+          </div>
+        </div>
+        <div id="project-5" class="project">
+          <div class="project-side"></div>
+          <div class="project-content">
+            <div class="project-text">
+              <h3><a href="#">Ad Blocker</a></h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Similique ratione quidem perspiciatis explicabo corrupti 
+                dignissimos officia aliquam.</p>
+            </div>
+            <div class="project-icons">
+              <img src="../img/favourite.svg" alt="Favourite icon" class="project-icon">
+              <img src="../img/view.svg" alt="View icon" class="project-icon">
+              <img src="../img/share.svg" alt="Share icon" class="project-icon" id="share-icon">
+            </div>
+          </div>
+        </div>
+        <div id="project-6" class="project">
+          <div class="project-side"></div>
+          <div class="project-content">
+            <div class="project-text">
+              <h3><a href="#">Money Maker</a></h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Velit quos sequi omnis facilis consequuntur voluptates, quasi 
+                minus.</p>
+            </div>
+            <div class="project-icons">
+              <img src="../img/favourite.svg" alt="Favourite icon" class="project-icon">
+              <img src="../img/view.svg" alt="View icon" class="project-icon">
+              <img src="../img/share.svg" alt="Share icon" class="project-icon" id="share-icon">
+            </div>
+          </div>
+        </div>
+
+        <div id="main-sidebar">
+          <div id="main-sidebar-1">
+            <div id="announcements">
+              <div class="announcement">
+                <h4><a href="#">Site Maintenance</a></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex 
+                  repellendus itaque possimus accusantium non magnam</p>
+              </div>
+              <div class="announcement">
+                <h4><a href="#">Community Share Day</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim quasi expedita.</p>
+
+              </div>
+              <div class="announcement">
+                <h4><a href="#">Updated Privacy Policy</a></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla deleniti aspernatur porro.</p>
+
+              </div>
+            </div>
+          </div>
+
+          <div id="main-sidebar-2">
+            <h3><a href="#">Trending</a></h3>
+          </div>
+
+          <div id="main-sidebar-3">
+            <div class="trend">
+              <img src="../img/anime-profile.png" alt="Profile picture" class="trending-profile-pic">
+              <div>
+                <p>@stef</p>
+                <p>World Peace Builder</p>
+              </div>
+            </div>
+            <div class="trend">
+              <img src="../img/cat-profile.png" alt="Profile picture" class="trending-profile-pic">
+              <div>
+                <p>@fr33fa11</p>
+                <p>Chaos Creator</p>
+              </div>
+            </div>
+            <div class="trend">
+              <img src="../img/profile-4.png" alt="Profile picture" class="trending-profile-pic">
+              <div>
+                <p>@zadelicious</p>
+                <p>Life Changing App</p>
+              </div>
+            </div>
+            <div class="trend">
+              <img src="../img/girl-profile.png" alt="Profile picture" class="trending-profile-pic">
+              <div>
+                <p>@alexa</p>
+                <p>No Traffic Maker</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="z-index-2">
+    <p>©deKoder 2024</p>
+  </footer>
+
+
+  
+</body>
+
+</html>
+
+<!-- Commit 1 \\
+ Setup main grid, populate and style admin sidebar
+ - initialise website template
+ - setup top layer grid
+ - html and css for admin sidebar
+  
+Commit 2 \\
+Complete missing dashboard elements
+
+ - Download the rest of the svgs required for the project
+ - Add Dashboard icon to sidebar and style dashboard sidebar element
+ - Add missing sidebar elements and gap
+
+Commit 3 \\
+Write HTML and CSS for top container
+
+ - Write HtML for top container
+ - Style top container contents
+ - Download profile pictures
+ - Replace notification icon to outline version
+
+ Commit 4 \\
+
+  - Create main titles
+  - Create projects grid
+  - Style main content titles
+  - Add and style project contents
+
+Commit 5 \\
+
+ - Create grid for announcements sidebar
+ - Create and style announcements section
+ - Add title for Trending
+ - Adjust View height to match project
+ - Create and style Trending section
+ - Add anchor tags to headings and icons
+ - Add hover effect to project icons and top buttons
+
+Commit 6 \\
+
+ - Add missed hyperlinks on trending headers
+ - Create js to highlight sidebar icons when related link is hovered
+ - Fix a bug in headerDropDown.js that meant the menu doesn't always close
+ - Modify js to hl sidebar icon when focussed via keyboard
+ - Rotate share icon to match example
+
+ -->

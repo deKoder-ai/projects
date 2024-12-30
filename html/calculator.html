@@ -1,0 +1,78 @@
+<!-- calculator -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/calculator.css">
+  <!-- research more about location in html for external scripts + async/defer? -->
+  <!-- defer loads script but prevents from running until html is parsed -->
+  <script src="../js/headerDropDown.js" defer></script>
+  <script src="../js/calculator.js" defer></script>
+  <title>Calculator</title>
+</head>
+
+<body>
+  <header class="z-index-2">
+    <div id="logo-flex-container">
+        <a href="../index.html" id="header-logo">FR33FA11</a>
+    </div>
+    <div class="header-links" id="header-links">
+      <!-- headerDropDown.js -->
+    </div>
+
+    <img src="../img/burger-2.svg" alt="Menu Icon" id="burger-menu">
+    <button id="burger-menu-btn"></button>
+    
+    <div id="header-dropdown-content">
+      <!-- headerDropDown.js -->
+    </div>
+  </header>
+
+
+  <div id="container">
+    <div id="calc_border">
+      <div id="calc_container">
+        <div id="display">
+          <p id="display_text"></p>
+        </div>
+        <div id="btns_container">
+          <div class="btns_row">
+            <button class="btn tool" id="btn_clear">AC</button>
+            <button class="btn tool" id="btn_cancel">C</button>
+            <button class="btn tool" id="btn_invert">+/-</button>
+            <button class="btn operator" id="btn_divide">/</button>
+          </div>
+          <div class="btns_row">
+            <button class="btn numbers" id="btn_7">7</button>
+            <button class="btn numbers" id="btn_8">8</button>
+            <button class="btn numbers" id="btn_9">9</button>
+            <button class="btn operator" id="btn_multiply">x</button>
+          </div>
+          <div class="btns_row">
+            <button class="btn numbers" id="btn_4">4</button>
+            <button class="btn numbers" id="btn_5">5</button>
+            <button class="btn numbers" id="btn_6">6</button>
+            <button class="btn operator" id="btn_minus">-</button>
+          </div>
+          <div class="btns_row">
+            <button class="btn numbers" id="btn_1">1</button>
+            <button class="btn numbers" id="btn_2">2</button>
+            <button class="btn numbers" id="btn_3">3</button>
+            <button class="btn operator" id="btn_add">+</button>
+          </div>
+          <div class="btns_row">
+            <button class="btn numbers" id="btn_0">0</button>
+            <button class="btn numbers" id="btn_decimal">.</button>
+            <button class="btn operator" id="btn_equals">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

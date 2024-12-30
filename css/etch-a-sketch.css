@@ -1,0 +1,55 @@
+body {
+    font-size: 22px;
+    font-family: Verdana, sans-serif;
+    color: rgb(204, 204, 204);
+    background-color: #222222;
+}
+
+/* ========== BOX MODEL ========== //
+//
+// Margin      | e.g. margin: 10px 10px 10px 20px (top | right | bottom | left)  
+// Border      | e.g. border: 2px dotted green
+// Padding     | e.g. padding: 10px (shorthand)
+// Content     | 
+// box-shadow: 1px 1px 4px rgba(0, 0, 0, .5);
+*/
+
+/* flex center */
+#num_of_squares_btn_div,
+/* #grid_container, */
+.row,
+.flex_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#num_of_squares_btn_div {
+    width: 100%;
+    height: 50px;
+}
+#num_of_squares_btn {
+    padding: 5px 20px;
+    border-radius: 7px;
+}
+#num_of_squares_btn:hover {
+    cursor: pointer;
+}
+
+#grid_container {
+    width: 39%;
+    height: 400px;
+    /* background-color: white; */
+}
+
+.grid_square {
+    border: 1px solid black;
+    /* background-color: rgb(255, 255, 255); */
+    
+}
+
+.grid_square:hover {
+    background-color: blue;
+
+    
+}
