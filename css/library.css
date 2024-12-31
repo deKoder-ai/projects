@@ -1,7 +1,7 @@
 @import 'style.css';
 
 .main {
-    font-family: poppins, sans-serif;
+    font-family: montserrat;
     font-size: 1.6rem;
 }
 
@@ -23,7 +23,7 @@
     cursor: pointer;
 }
 
-#new-book-form {
+#new-book-form-container {
     display: none;
     position: fixed;
     top: 50%;
@@ -157,12 +157,12 @@ td {
     align-items: center;
 }
 
-#delete-btn {
+.delete-btn {
     font-size: 1.2rem;
     padding: 1px 10px;
     border-radius: 7px;
 }
-#delete-btn:hover {
+.delete-btn:hover {
     cursor: pointer;
 }
 

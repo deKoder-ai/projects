@@ -1,6 +1,7 @@
-
+'use strict'
 const currentPage = location.pathname.split("/").pop();
 function createPath(page) {
+    let path = null
     if (currentPage === 'index.html') {
         path = `html/${page}`;
     } else {
@@ -23,7 +24,7 @@ function addHeaderLink(name, page) {
     link.href = createPath(page);
     headerLinksDiv.appendChild(link);
 }
-for (link of headerLinks) {
+for (let link of headerLinks) {
     addHeaderLink(link[0], link[1]);
 }
 
@@ -39,17 +40,18 @@ function addMenuItem(content, type, page) {
     }
     const menu = document.getElementById('header-dropdown-content');
     const item = document.createElement(type);
-    path = createPath(page);
+    const path = createPath(page);
     item.textContent = content;
     formatItem();
     menu.appendChild(item);
 }
 
-menuContent = [
+const menuContent = [
     ['Tools', 'h3', '#'],
     ['| Shopping List', 'a', 'shopping-list.html'],
     ['| Library', 'a', 'library.html'],
     ['| Calculator', 'a', 'calculator.html'],
+    ['| Pomodoro Timer', 'a', 'pomodoro.html'],
     ['Games', 'h3', '#'],
     ['| Tic Tac Toe', 'a', 'tictactoe.html'],
     ['| Rock Paper Scissors', 'a', 'rps.html'],
@@ -58,7 +60,7 @@ menuContent = [
     ['| Landing Page', 'a', 'landing-page.html'],
 ]
 // add items to menu
-for (item of menuContent) {
+for (let item of menuContent) {
     addMenuItem(item[0], item[1], item[2]);
 }
 

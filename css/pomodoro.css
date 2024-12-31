@@ -1,0 +1,245 @@
+/* style.css template */
+@import 'reset.css';
+
+/* using the Google Fonts API violates the European GDPR */
+/* better to store fonts locally on the website */
+@font-face {
+    font-family: adrip;
+    src: url(../fonts/adrip1.woff2);
+    font-weight: bold;
+    font-display: block;
+}
+@font-face {
+    font-family: typo;
+    src: url(../fonts/typo.woff2);
+    font-display: block;
+}
+
+
+/* global - specificity = 0 */
+
+:root {
+    --header-height: 5rem;
+    --header-footer-bg-col: rgb(7, 7, 7);
+    --text-color: rgb(204, 204, 204);
+    --main-bg-col: rgb(19, 19, 19);
+    --h1-col: rgb(158, 40, 40);
+    --footer-height: 3.5rem;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    /* call fonts as early as possible to improve performance */
+    /* font-family: typo, Verdana, system-ui, sans-serif; */
+    /* font-size: calc(1rem + 1.5vw); */
+    color: var(--text-color);
+    background-color: var(--main-bg-col);
+}
+
+h1 {
+    font-family: adrip, system-ui, sans-serif;
+    font-size: clamp(7rem, (1rem + 10vw), 10rem);
+    font-weight: 100;
+    color: var(--h1-col);
+    text-align: center;
+    margin-bottom: -25px;
+    text-shadow: 3px 3px 5px #100a5791;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.view {
+    background-color: var(--main-bg-col);
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+
+/* pomodoro */
+.pom-view {
+    width: 100vw;
+    height: calc(100vh - var(--header-height));
+    font-family: poppins, sans-serif;
+}
+.pom-main-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.pom-main-container > :nth-child(odd) {
+    background-color: rgb(141, 158, 180);
+}
+.pom-main-container > :nth-child(2) {
+    width: 50%;
+    background-color: var(--main-bg-col);
+}
+.pom-center :first-child {
+    font-size: 2.2rem;
+    padding-top: 10px;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* left section - inputs */
+.pom-left {
+    width: 25%;
+    color: black;
+    font-size: 1.6rem;
+    padding-left: 3%;
+    flex-shrink: 2;
+}
+label {
+    text-transform: uppercase;
+    font-family: typo;
+    display: block;
+    font-size: 1.2rem;
+    margin: 25px 0px 2px 0px;
+    text-align: left;
+}
+#focus-timer-input,
+#break-timer-input,
+#sessions-input,
+#lunch-alarm-input,
+#dinner-alarm-input,
+#other-alarm-input {
+    width: 85%;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+/* center timer section */
+p.time {
+    opacity: 0.4;
+}
+.session {
+    margin: 20px 0px 15px 0px;
+}
+#timer {
+    font-size: 6rem;
+    margin: 25px 0px 40px 0px;
+}
+.pom-play-btn-div,
+.pom-pause-btn-div,
+.pom-refresh-btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border: 2px solid rgb(116, 75, 170);
+    background-color: rgb(141, 158, 180);
+    border-radius: 35px;
+    margin: 0px 10px;
+}
+/* #pom-refresh-btn-div:hover,
+#pom-refresh-btn-div:focus,
+#pom-pause-btn-div:hover,
+#pom-pause-btn-div:focus,
+#pom-play-btn-div:hover,
+#pom-play-btn-div:focus {
+    outline: 10px solid rgb(248, 136, 136);
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgb(201, 201, 201);
+    background-color: rgb(65, 98, 141);
+} */
+ 
+#pom-play-btn {
+    width: 70px;
+    height: 70px;
+    margin-top: -20px;
+}
+#pom-pause-btn {
+    width: 70px;
+    height: 70px;
+    margin-top: -10px;
+}
+#pom-refresh-btn {
+    width: 50px;
+    height: 60px;
+    margin-top: -10px;
+}
+
+/* right task list section */
+.pom-right {
+    width: 25%;
+    color: black;
+    font-size: 1.6rem;
+    padding-left: calc(25% / 10);
+}
+.task-input-section {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#add-task-input {
+    width: 260px;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+#add-task-btn-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 0px 5px;
+}
+.add-task-btn {
+    width: 23px;
+    height: 23px;
+    /* outline: 2px solid rgba(0, 0, 0, 0.37); */
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 6px;
+    margin-left: 2px;
+}
+.pom-task-list {
+    margin: 12px 0px 0px 15px;
+    width: 275px;
+}
+.pom-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.delSVG {
+    width: 22px;
+    height: 22px;
+    margin-left: 0px;
+    background-color: white;
+    /* padding: 1px; */
+    outline: 2px solid rgba(0, 0, 0, 0.397);
+    border-radius: 5px;
+}
+.strike-through {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.delSVG:hover,
+.delSVG:focus,
+button:hover,
+button:focus,
+input:focus {
+    outline: 2px solid rgba(26, 26, 214, 0.479);
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.527);
+}
+

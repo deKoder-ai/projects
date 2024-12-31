@@ -46,7 +46,7 @@
       </div>
 
       <!-- <dialog id="new-book-dialog"> -->
-        <div id="new-book-form">
+        <div id="new-book-form-container">
           <form action="https://httpbin.org/post" method="post" id="new-book-data">
             <button type="reset" id="close-form">X</button>
             <div id="library-form">
@@ -112,15 +112,6 @@
           </tbody>
         </table>
       </div>
-
-
-
-
-
-
-
-
-
     </div>
   </div>
 
@@ -181,10 +172,22 @@ Streamline code
  - Added logic to avoid submitting books without all req data
  - Attempted to use dialog but encountered weird duplication bug
 
+ Commit 7
+ Reorganise code to use js class
+
+ - Convert Book object to class
+ - Add read checkbox and delete button to book object
+ - Add event listener to close new book form on escape press
+ - Autofocus title input on new book form open
+ - Refactor code to organise the functions more logically
+ - Give each book a specific id
+ - Use given id to identify books for deletion or alter read status
 
  To do:
  - Read more about dialog element for form display:
    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog 
  - refactor js to avoid repetition
- - consider adding checkbox and delete button to book object
+ - Pagination
+ - Add ability to save books to disk
+ - Load from JSON file?
 -->

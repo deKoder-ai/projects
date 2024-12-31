@@ -1,0 +1,172 @@
+<!-- Pomodoro & Alarms -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pomodoro.css">
+  <link rel="icon" type="image/svg+xml" href="../html/favicon.svg" sizes="16x16">
+  <!-- research more about location in html for external scripts + async/defer? -->
+  <!-- defer loads script but prevents from running until html is parsed -->
+  <script src="../js/headerDropDown.js" defer></script>
+  <script src="../js/runInBackground.js" defer></script>
+  <!-- <script src="../js/pomodoro.js" defer></script> -->
+  <title>FR33FL0W | Pomodoro Timer</title>
+</head>
+
+<body>
+  <header class="z-index-2">
+    <div id="logo-flex-container">
+        <a href="../index.html" id="header-logo">FR33FL0W</a>
+    </div>
+    <div class="header-links" id="header-links">
+      <!-- headerDropDown.js -->
+    </div>
+
+    <img src="../img/burger-2.svg" alt="Menu Icon" id="burger-menu">
+    <button id="burger-menu-btn"></button>
+    
+    <div id="header-dropdown-content">
+      <!-- headerDropDown.js -->
+    </div>
+
+  </header>
+  
+
+  <!-- links -->
+  <!-- target blank opens in new tab - rel prevents new website from knowing where the referral came from -->
+  <!-- <a href="https://xyz.com" target="_blank" rel="noopener noreferrer">Write text here</a> -->
+
+  <div class="pom-view">
+    <div class="pom-main-container">
+      <div class="pom-left">
+        
+        <label for="focus-timer-input">Focus Timer</label>
+        <div class="focus-timer-input-section">
+          <div>
+            <input type="text" 
+              name="focus-timer-input" 
+              id="focus-timer-input"
+              value="45">
+          </div>
+        </div>
+        
+        <label for="break-timer-input">Break Timer</label>
+        <div class="break-timer-input-section">
+          <div>
+            <input type="text" 
+              name="break-timer-input" 
+              id="break-timer-input"
+              value="10">
+          </div>
+        </div>
+
+        <label for="sessions-input">Sessions</label>
+        <div class="sessions-input-section">
+          <div>
+            <input type="text" 
+              name="sessions-input" 
+              id="sessions-input"
+              value="4">
+          </div>
+        </div>
+
+        <label for="lunch-alarm-input">Lunch Time</label>
+        <div class="lunch-alarm-input-section">
+          <div>
+            <input type="time" 
+              name="lunch-alarm-input" 
+              id="lunch-alarm-input"
+              value="13:30">
+          </div>
+        </div>
+
+        <label for="dinner-alarm-input">Dinner Time</label>
+        <div class="dinner-alarm-input-section">
+          <div>
+            <input type="time" 
+              name="dinner-alarm-input" 
+              id="dinner-alarm-input"
+              value="18:30">
+          </div>
+        </div>
+
+        <label for="other-alarm-input">Other Alarm</label>
+        <div class="other-alarm-input-section">
+          <div>
+            <input type="time" 
+              name="other-alarm-input" 
+              id="other-alarm-input"
+              value="">
+          </div>
+        </div>
+      </div>
+
+      <div class="pom-center">
+        <div class="flex-center">
+          <p class="time"><span id="timezone"></span> Time - <span id="current-time"></span></p>
+        </div>
+
+        <div class="flex-center session">
+          <p class="session">Session: <span id="session-num">1</span></p>
+        </div>
+
+        <div class="flex-center">
+          <p><span id="timer-type">Focus </span>Time</p>
+        </div>
+        
+        <div class="flex-center">
+          <span id="timer">00:00</span>
+        </div>
+
+        <div class="flex-center">
+          <button class="pom-play-btn-div">
+            <img src="/img/play.svg"
+              alt="Play button for Pomodoro countdown"
+              id="pom-play-btn">
+          </button>
+          <button class="pom-pause-btn-div" id="pause-btn">
+            <img src="/img/pause.svg"
+              alt="Pause button for Pomodoro countdown"
+              id="pom-pause-btn">
+          </button>
+          <button class="pom-refresh-btn-div">
+            <img src="/img/refresh.svg"
+              alt="Refresh button for Pomodoro countdown"
+              id="pom-refresh-btn">
+          </button>
+        </div>
+      </div>
+
+      <div class="pom-right">
+        <label for="add-task-input">Add Task</label>
+        <div class="task-input-section">
+          <div><input type="text" name="add-task-input" id="add-task-input"></div>
+          <div id="add-task-btn-div">
+            <button class="add-task-btn">
+              <img src="../img/plus.svg" 
+              alt="A button to add tasks to the list"
+              id="add-task-btn"
+              class="delSVG">
+            </button>
+          </div>
+        </div>
+        <div class="pom-task-list">
+          <ul id="pom-task-list">
+            <!-- pomodoro.js adds tasks here -->
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>©deKoder 2024</p>
+  </footer>
+  
+</body>
+
+</html>
